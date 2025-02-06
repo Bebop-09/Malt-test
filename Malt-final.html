@@ -234,6 +234,10 @@
         width: 50px;
         height: 50px;
       }
+      .logo_footer {  
+        margin-top: 20%;      
+          scale: 1;
+      }
 
       .feature-box p {
         margin-top: 10px;
@@ -432,6 +436,15 @@
       /* ============== MEDIA QUERIES (max-width: 960px) ============== */
       @media (max-width: 900px) {
         /* Switch to vertical layout */
+
+        .logo_footer {  
+          margin-top: 20%;  
+          margin-bottom: 20%;    
+          scale: 1;
+          width: auto;
+          height: auto;
+        }
+
 
         header {
           width: 100%;
@@ -641,6 +654,11 @@
           margin-bottom: 20px; /* spacing from disclaimers */
         }
 
+          /* Style the logo image */
+           .footer .logo-container img {
+            height: auto; /* Adjust as needed */
+            }
+
         .footer-text {
           order: 2; /* Appear below the buttons */
           max-width: 100%;
@@ -666,12 +684,12 @@
       <div class="logo-container">
         <img src="img/logo.png" alt="Logo" class="logo_" />
       </div>
-      <div class="cta-container">
+     <!-- <div class="cta-container">
         <button class="cta-button" id="quote-btn">
           OBTENER UNA COTIZACIÓN
         </button>
         <button class="lang-button" id="lang-toggle">ES</button>
-      </div>
+      </div>-->
     </header>
 
     <!-- HERO / MAIN CONTAINER -->
@@ -1023,8 +1041,13 @@ Esperamos que no sea necesario, pero si no estás satisfecho, puedes contactar a
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
+      <!-- Logo on the left (desktop) / below text (mobile) -->
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Logo" class="logo_footer" />
+      </div>
+    
+      <!-- Disclaimer text on the right (desktop) / on top (mobile) -->
       <p class="footer-text" id="footer-disclaimer">
         La cobertura está suscrita por xx, autorizado por la Autoridad de
         Regulación Prudencial y regulado por la Autoridad de Conducta Financiera
@@ -1035,13 +1058,15 @@ Esperamos que no sea necesario, pero si no estás satisfecho, puedes contactar a
         La cobertura es organizada por Indeez SAS, ubicada en 19 rue du Rocher,
         75008 París, Francia. Indeez SAS, operando bajo la marca Indeez, está
         registrada como corredor de seguros en el Registro ORIAS de Francia,
-        bajo el número 20006983 (<a href="https://www.orias.fr">www.orias.fr</a
-        >). En el Reino Unido, Indeez SAS está autorizada y regulada por la
+        bajo el número 20006983 (<a href="https://www.orias.fr">www.orias.fr</a>).
+        En el Reino Unido, Indeez SAS está autorizada y regulada por la
         Autoridad de Conducta Financiera (FCA). Indeez SAS está incluida en el
         registro de servicios financieros (<a href="https://register.fca.org.uk"
           >register.fca.org.uk</a
         >) y su número de registro de la FCA es 978039.
       </p>
+    
+      <!-- Keep this commented section if you want to restore the footer actions/buttons later
       <div class="footer-actions">
         <div class="footer-links">
           <button class="cta-button footer_btn_cta" id="footer-quote-btn">
@@ -1053,6 +1078,7 @@ Esperamos que no sea necesario, pero si no estás satisfecho, puedes contactar a
           ¡Y siempre puedes <a href="#contact">contactarnos aquí</a>!
         </p>
       </div>
+      -->
     </footer>
 
     <!-- LANGUAGE & FAQ SCRIPTS -->
@@ -1292,11 +1318,11 @@ Esperamos que no sea necesario, pero si no estás satisfecho, puedes contactar a
       applyTranslations("es");
 
       // Handle language toggle
-      const langToggleBtn = document.getElementById("lang-toggle");
-      langToggleBtn.addEventListener("click", () => {
-        currentLang = currentLang === "es" ? "en" : "es";
-        applyTranslations(currentLang);
-      });
+      //const langToggleBtn = document.getElementById("lang-toggle");
+      //langToggleBtn.addEventListener("click", () => {
+        //currentLang = currentLang === "es" ? "en" : "es";
+        //applyTranslations(currentLang);
+     // });
 
       // FAQ expand/collapse
       const faqQuestions = document.querySelectorAll(".faq-question");
